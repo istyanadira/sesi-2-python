@@ -1,0 +1,10 @@
+x, y = "", 'kosong'
+a = bool(x) and bool(y)
+o = bool(x) or bool(y)
+n = not bool(x)
+x = bool(x) ^ bool(y)
+print('x is', bool(x), 'and y is', bool(y),'so...')
+print('x AND y is', a)
+print('x OR y is', o)
+print('NOT x is', n)
+print('x XOR y is', x)
