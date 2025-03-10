@@ -1,0 +1,11 @@
+box = []
+angka1 = int(input("Masukkan angka pertama: "))
+box.append(angka1)
+angka2 = int(input("Masukkan angka kedua: "))
+box.append(angka2)
+angka3 = int(input("Masukkan angka ketiga: "))
+box.append(angka3)
+box.sort(reverse=True)
+print("Angka terbesarnya adalah %s dari angka yang di input" % (box[0]))
+print("Urutannya: ")
+print(box)
