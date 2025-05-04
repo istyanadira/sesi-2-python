@@ -1,0 +1,10 @@
+buah = ["Stroberi", "Melon", "Jeruk", "Semangka", "Jambu"]
+print("Berikut nama buah yang ada di list: ")
+print(buah)
+print("Beriku nama buah pada index ke 2: ")
+print('"%s"'%(buah[2]))
+print()
+plus_buah = input("Masukkan jenis buah yang akan ditambahkan: ")
+buah.append(plus_buah)
+print("Ini adalah list terbaru setelah menambahkan %s ke dalam list buah: " %(plus_buah))
+print(buah)
