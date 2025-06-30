@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polling Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto py-5">
+        <h1 class="text-2xl font-bold mb-4">{{ question.question_text }}</h1>
+        <form action="{% url 'polls:vote' question.id %}" method="post">
+            {% csrf_token %}
+            {% for choice in question.choice_set.all %}
+                <label class="block mb-2">
+                    <input type="radio" name="choice" value="{{ choice.id }}">
+                    {{ choice.choice_text }}
+                </label>
+            {% endfor %}
+            <button type="submit" class="mt-4 bg-blue-500 text-white px-3 py-1 rounded">Vote</button>
+        </form>
+    </div>
+</body>
+</html>
